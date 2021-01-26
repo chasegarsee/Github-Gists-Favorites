@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## Visit Hosted Website
+To view the hosted website, navigate to: [https://github-gists-favorites.netlify.app/](https://github-gists-favorites.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Note: For some reason Netlify does not like it when you refresh the page while not on the root domain. Refreshing on the /favorites route results in a Page Not Found error. I deemed solving this out of scope for this project.**
 
-## Available Scripts
+## Or Run The Application Locally
 
-In the project directory, you can run:
 
-### `yarn start`
+### run: `yarn` in your terminal then `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The page will reload if you make edits.
 
-### `yarn test`
+##  How would I extend or improve this application design if I were building this for production?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Better / More Robust and Dynamic Error Handling
 
-### `yarn build`
+I would create a more robust error handling system that caught any error that occured and gave the user a clean alert message noting that error.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### More Reusable Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I would make two or three of the components in this application more dynamic and reusable. I would pass in props for text copy vs. hard coding the text in each component. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Offline First Functionality
 
-### `yarn eject`
+I would implement offline functionality for this app so that users could access their favorite gists from anywhere without the need for internet connectivity.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Request Cacheing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would want to cache or save username requests and/or payloads locally so that if the user had a certain set of github users they like looking for new gists in, the app wouldn't make any unnecessary api requests.
