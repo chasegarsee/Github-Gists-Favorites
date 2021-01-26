@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect } from "react"
+import { useIndexedDB } from "react-indexed-db"
 import mockUser from "../context/mockData/mockUser"
 import mockGists from "./mockData/mockGists"
 import fetchGists from "../utilities/fetchRequests/fetchGists"
@@ -8,7 +9,22 @@ const GitContext = createContext()
 const GithubProvider = ({ children }) => {
     const [githubUser, setGithubUser] = useState(mockUser)
     const [gists, setGists] = useState(mockGists)
+    const [favoritedGists, setFavoritedGists] = useState([])
     const [error, setError] = useState("")
+
+
+    const { getAll } = useIndexedDB("gists")
+
+    const updateStateFromLocalDatabase = async () => {
+      const favoritedIDBResult = await getAll()
+      setFavoritedGists(favoritedIDBResult)
+    }
+
+    console.log({ favoritedGists })
+  
+    useEffect(() => {
+      updateStateFromLocalDatabase()
+    }, [])
 
 
   useEffect(() => {
@@ -22,7 +38,9 @@ const GithubProvider = ({ children }) => {
           value={{
             githubUser, setGithubUser,
             gists, setGists,
-            error, setError
+            error, setError,
+            favoritedGists, setFavoritedGists,
+            updateStateFromLocalDatabase
           }}
         >
           {children}

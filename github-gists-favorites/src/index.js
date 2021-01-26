@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import { GithubProvider } from "./context/context"
 import reportWebVitals from './reportWebVitals';
-
-
+import { initDB } from "react-indexed-db"
+import { DBConfig } from "./utilities/DBConfig"
 import "bootstrap/dist/css/bootstrap.min.css"
+
+initDB(DBConfig)
 
 ReactDOM.render(
   <GithubProvider>
