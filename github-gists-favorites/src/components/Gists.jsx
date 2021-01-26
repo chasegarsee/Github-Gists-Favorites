@@ -1,6 +1,7 @@
 import React, {useState, useContext } from 'react'
 import { GitContext } from "../context/context"
 import { Container, Card, Row, Col } from "react-bootstrap"
+import GistCode from './GistCode'
 
 export default function Gists() {
     const { gists } = useContext(GitContext)
@@ -18,7 +19,7 @@ export default function Gists() {
                 </Row>
               </Card.Header>
               <Card.Body>
-                {Object.values(gist.files)[0].raw_url}
+                <GistCode gistId={gist.id} />
               </Card.Body>
             </Card>
           </Col>
