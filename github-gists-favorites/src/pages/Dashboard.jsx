@@ -2,6 +2,8 @@ import React from 'react'
 import UserSearch from "../components/UserSearch"
 import UserInfo from "../components/UserInfo"
 import { Container, Row } from "react-bootstrap"
+import Gists from '../components/Gists'
+import "./styles.css"
 
 export default function Dashboard() {
     return (
@@ -14,6 +16,7 @@ export default function Dashboard() {
           <UserInfo />
         </Row>
       </Container>
+      <Gists />
       </>
     )
 }
