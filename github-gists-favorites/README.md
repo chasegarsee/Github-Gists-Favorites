@@ -34,3 +34,6 @@ I would want to cache or save username requests and/or payloads locally so that 
 ### Add Pagination
 
 I would add pagination so that the users can view fewer gists at a time, and toggle through pages if they wanted to see more.
+
+
+**Note: I have VERY limited knowledge with testing and testing suites. It is something I am very awair I need to start learning and implementing into my projects. I started to read and learn a little about testing for the favoriting tests requirements, but I did not want to fake something I know I didn't know.**
