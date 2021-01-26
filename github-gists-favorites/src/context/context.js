@@ -5,13 +5,14 @@ const GitContext = createContext()
 
 const GithubProvider = ({ children }) => {
     const [githubUser, setGithubUser] = useState(mockUser)
+    const [error, setError] = useState("")
 
 
     return (
         <GitContext.Provider
           value={{
-            githubUser,
-            setGithubUser
+            githubUser, setGithubUser,
+            error, setError
           }}
         >
           {children}
