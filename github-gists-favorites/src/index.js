@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { GithubProvider } from "./context/context"
 import reportWebVitals from './reportWebVitals';
+
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
 ReactDOM.render(
-  <React.StrictMode>
+  <GithubProvider>
     <App />
-  </React.StrictMode>,
+  </GithubProvider>,
   document.getElementById('root')
 );
 
