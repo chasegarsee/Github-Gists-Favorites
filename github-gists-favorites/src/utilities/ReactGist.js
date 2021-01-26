@@ -39,10 +39,12 @@ class ReactGist extends React.PureComponent {
   }
 
   render() {
-    const { id, file } = this.props
+    const { id, file, className } = this.props
 
     return (
       <iframe
+        title={file}
+        className={className}
         ref={(n) => {
           this.iframeNode = n
         }}

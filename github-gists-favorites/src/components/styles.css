@@ -2,3 +2,7 @@
     height: 8em;
     width: 8em;
   }
+
+  .minimize {
+    height: 15rem !important;
+  }
