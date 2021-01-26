@@ -10,6 +10,7 @@ const GithubProvider = ({ children }) => {
     const [githubUser, setGithubUser] = useState(mockUser)
     const [gists, setGists] = useState(mockGists)
     const [favoritedGists, setFavoritedGists] = useState([])
+    const [showToast, setShowToast] = useState(true)
     const [error, setError] = useState("")
 
 
@@ -40,6 +41,7 @@ const GithubProvider = ({ children }) => {
             gists, setGists,
             error, setError,
             favoritedGists, setFavoritedGists,
+            showToast, setShowToast,
             updateStateFromLocalDatabase
           }}
         >

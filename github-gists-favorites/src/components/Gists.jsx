@@ -6,7 +6,7 @@ import { Star } from "react-feather"
 import GistCode from './GistCode'
 
 export default function Gists() {
-    const { gists, favoritedGists, updateStateFromLocalDatabase  } = useContext(GitContext)
+    const { gists, favoritedGists, updateStateFromLocalDatabase, setShowToast  } = useContext(GitContext)
 
     const { add } = useIndexedDB("gists")
 
@@ -14,6 +14,7 @@ export default function Gists() {
       if (favoritedGists.some((fav) => fav.id === id)) {
       } else {
         add({ filename, id }).then((res) => {
+          setShowToast(true)
           return res
         })
         updateStateFromLocalDatabase()
