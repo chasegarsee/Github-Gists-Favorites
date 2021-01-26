@@ -30,3 +30,7 @@ I would implement offline functionality for this app so that users could access 
 ### Request Cacheing
 
 I would want to cache or save username requests and/or payloads locally so that if the user had a certain set of github users they like looking for new gists in, the app wouldn't make any unnecessary api requests.
+
+### Add Pagination
+
+I would add pagination so that the users can view fewer gists at a time, and toggle through pages if they wanted to see more.
