@@ -3,6 +3,7 @@ import { GitContext } from "../context/context"
 import { Container, Card, Row, Col, Button } from "react-bootstrap"
 import { Star } from "react-feather"
 import GistCode from "../components/GistCode"
+import NoFavorites from "../components/NoFavorites"
 import { useIndexedDB } from "react-indexed-db"
 import "./styles.css"
 
@@ -19,7 +20,9 @@ export default function Favorites() {
   
     
     return (
+      <>
     <Container className="mt-3">
+    {favoritedGists.length === 0 ? <NoFavorites /> :
       <Row md="auto" sm="1" xs="1">
         {favoritedGists.map((gist, key) => (
           <Col key={key}>
@@ -49,6 +52,8 @@ export default function Favorites() {
           </Col>
         ))}
       </Row>
+      }
     </Container>
+    </>
     )
 }
